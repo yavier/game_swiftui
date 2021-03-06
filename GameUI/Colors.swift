@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import SwiftUI
+
+extension Color {
+
+  static let carnation: Color = Color("Color")
+
+  static let orchid: Color = Color("Color1")
+
+  static let color2: Color = Color("Color2")
+
+  static let color3: Color = Color("Color3")
+
+  static let color4: Color = Color("Color4")
+  
+}

@@ -24,14 +24,15 @@ struct PowerView: View {
   var body: some View {
     ZStack {
 
-      Circle().fill(power.color)
+      Circle()
+        .fill(power.color)
       Circle()
         .stroke(Color.black.opacity(0.1), lineWidth: 5)
       Circle()
         .trim(from: 0.0, to: CGFloat(min(progress, 1.0)))
         .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
         .foregroundColor(.white)
-        //        .rotationEffect(Angle(degrees: 270.0))
+        .rotationEffect(Angle(degrees: 270.0))
         .animation(Animation.linear(duration: 1).delay(0.5))
       Image(systemName: power.image)
         .foregroundColor(.white)
@@ -49,12 +50,12 @@ struct PowerView: View {
 
 struct Card : View {
 
-  var data : Player
+  var player: Player
 
   private var powers: [Power] {
     let images = ["bolt.fill", "suit.heart.fill", "hammer.fill"]
-    return zip(images, data.powers).map { image, value in
-      Power(image: image, color: data.color, progress: value)
+    return zip(images, player.powers).map { image, value in
+      Power(image: image, color: player.color, progress: value)
     }
   }
 
@@ -63,9 +64,9 @@ struct Card : View {
     ZStack{
       HStack{
 
-        Image(self.data.image)
+        Image(player.image)
           .resizable()
-          .frame(width: UIScreen.main.bounds.width / 1.8)
+          .frame(width: UIScreen.main.bounds.width * 0.55)
 
         Spacer()
         powersView()
@@ -74,12 +75,7 @@ struct Card : View {
       .background(background())
       .padding(.horizontal)
 
-      NavigationLink(destination: Detail(data: self.data)) {
-
-          Color.clear
-//          Spacer()
-      
-      }
+      NavigationLink(destination: Detail(player: player)) { Color.clear }
     }
 
   }
@@ -100,7 +96,6 @@ struct Card : View {
       // going to trim view..
       .padding(.vertical, 35)
       .padding(.trailing, 25)
-
   }
 
 }
@@ -111,6 +106,6 @@ struct Card_Previews: PreviewProvider {
 
     let player = Player(id: 1, powers: [0.2,0.5,0.9], image: "Player1", name: "Bomb Raider", color: Color("Color"))
 
-    Card(data: player).background(Color.gray)
+    Card(player: player).background(Color.gray)
   }
 }

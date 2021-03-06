@@ -8,13 +8,12 @@
 
 import SwiftUI
 
-
-
 struct Home : View {
 
   @ObservedObject var viewModel: HomeViewModel
+  
 
-  var body: some View{
+  var body: some View {
 
     VStack{
 
@@ -43,21 +42,20 @@ struct Home : View {
 
         VStack(spacing: 10){
 
-          ForEach(data){ i in
-
-            Card(data: i)
-          }
+          ForEach(viewModel.players, content: Card.init)
         }
         .padding(.bottom)
       }
     }
     .background(LinearGradient(gradient: .init(colors: [Color("Color"),Color("Color1")]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
     .edgesIgnoringSafeArea(.bottom)
+    .onAppear(perform: viewModel.fetchPlayers)
   }
 }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        Home(viewModel: HomeViewModel())
+      Home(viewModel: HomeViewModel())
+        .previewDevice("iPhone 11")
     }
 }

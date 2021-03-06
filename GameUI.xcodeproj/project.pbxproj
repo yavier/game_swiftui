@@ -22,6 +22,8 @@
 		E745C71F25F4174E0062577A /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745C71E25F4174E0062577A /* Detail.swift */; };
 		E745C72725F418850062577A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745C72625F418850062577A /* Colors.swift */; };
 		E745C72C25F419A40062577A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745C72B25F419A40062577A /* Player.swift */; };
+		E745C74225F427290062577A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745C74125F427290062577A /* DetailViewModel.swift */; };
+		E745C74725F42E9F0062577A /* AnimationCompletionObserverModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745C74625F42E9F0062577A /* AnimationCompletionObserverModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		E745C71E25F4174E0062577A /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		E745C72625F418850062577A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E745C72B25F419A40062577A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		E745C74125F427290062577A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		E745C74625F42E9F0062577A /* AnimationCompletionObserverModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCompletionObserverModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				E745C71E25F4174E0062577A /* Detail.swift */,
+				E745C74125F427290062577A /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				E745C72625F418850062577A /* Colors.swift */,
+				E745C74625F42E9F0062577A /* AnimationCompletionObserverModifier.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD14B74E247EEF580033DD01 /* AppDelegate.swift in Sources */,
+				E745C74725F42E9F0062577A /* AnimationCompletionObserverModifier.swift in Sources */,
 				E745C72725F418850062577A /* Colors.swift in Sources */,
 				E745C6A125F2C37B0062577A /* Card.swift in Sources */,
 				E745C71F25F4174E0062577A /* Detail.swift in Sources */,
@@ -329,6 +336,7 @@
 				AD14B750247EEF580033DD01 /* SceneDelegate.swift in Sources */,
 				E745C68F25F2C31E0062577A /* Home.swift in Sources */,
 				E745C72C25F419A40062577A /* Player.swift in Sources */,
+				E745C74225F427290062577A /* DetailViewModel.swift in Sources */,
 				AD14B752247EEF580033DD01 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

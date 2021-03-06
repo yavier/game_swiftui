@@ -7,10 +7,15 @@
 import SwiftUI
 
 // Detail View...
-
 struct Detail : View {
 
   let player: Player
+
+  @State var isLike: Bool = false
+
+  @State var likeAnimation: Bool = false
+
+  var viewModel: DetailViewModel = DetailViewModel()
 
   @Environment(\.presentationMode) var presentationMode
 
@@ -44,6 +49,11 @@ struct Detail : View {
 
       Button(action: {
 
+
+        withAnimation(Animation.spring()) {
+          introTextOpacity = 1.0
+        }
+
       }) {
         Text("Add Favourite")
           .padding(.vertical)
@@ -52,6 +62,9 @@ struct Detail : View {
       }
 
       Button(action: {
+
+
+
       }) {
         Text("Play Now")
           .padding(.vertical)
@@ -64,39 +77,57 @@ struct Detail : View {
     .padding(.bottom, 8)
   }
 
+  @State var introTextOpacity: Double = 0.0
+
   var body: some View{
+    ZStack{
 
-    VStack{
+      VStack{
 
-      header()
+        header()
 
-      ScrollView {
-        Image(player.image)
-          .resizable()
-          .frame(width: UIScreen.main.bounds.width * 0.60, height: UIScreen.main.bounds.width * 0.60 * 1.04)
-          .background(Color.white.opacity(0.2))
-          .cornerRadius(30)
+        ScrollView {
+          Image(player.image)
+            .resizable()
+            .frame(width: UIScreen.main.bounds.width * 0.60, height: UIScreen.main.bounds.width * 0.60 * 1.04)
+            .background(Color.white.opacity(0.2))
+            .cornerRadius(30)
 
-        Text(player.name)
-          .font(.largeTitle)
-          .fontWeight(.bold)
-          .padding(.top)
+          Text(player.name)
+            .font(.largeTitle)
+            .fontWeight(.bold)
+            .padding(.top)
 
-        Text(player.description)
-          .multilineTextAlignment(.center)
-          .font(.callout)
-          .padding(.top, 8)
+          Text(player.description)
+            .multilineTextAlignment(.center)
+            .font(.callout)
+            .padding(.top, 8)
+        }
+        .foregroundColor(.white)
+
+        footer()
+
       }
-      .foregroundColor(.white)
+      .padding(.horizontal)
+      .background(gradient())
+      .navigationBarTitle("",displayMode: .inline)
+      .navigationBarBackButtonHidden(true)
+      .navigationBarHidden(true)
 
-      footer()
+
+      Image(systemName: "heart.fill")
+        .resizable()
+        .scaledToFit()
+        .padding()
+        .foregroundColor(.red)
+        .opacity(introTextOpacity)
+        .scaleEffect(1)
+        .onAnimationCompleted(for: introTextOpacity) {
+          print("Intro text animated in!")
+          introTextOpacity = 0
+        }
 
     }
-    .padding(.horizontal)
-    .background(gradient())
-    .navigationBarTitle("",displayMode: .inline)
-    .navigationBarBackButtonHidden(true)
-    .navigationBarHidden(true)
   }
 
   func gradient() -> some View {
@@ -111,6 +142,8 @@ struct Detail : View {
   func onTapGrid() {
 
   }
+
+  
 
 }
 

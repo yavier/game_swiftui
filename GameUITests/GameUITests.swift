@@ -2,9 +2,6 @@
 //  GameUITests.swift
 //  GameUITests
 //
-//  Created by Balaji on 28/05/20.
-//  Copyright © 2020 Balaji. All rights reserved.
-//
 
 import XCTest
 @testable import GameUI

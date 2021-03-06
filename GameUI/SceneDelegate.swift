@@ -2,9 +2,6 @@
 //  SceneDelegate.swift
 //  GameUI
 //
-//  Created by Kavsoft on 28/05/20.
-//  Copyright © 2020 Kavsoft. All rights reserved.
-//
 
 import UIKit
 import SwiftUI

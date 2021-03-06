@@ -113,18 +113,16 @@
 		AD14B74C247EEF580033DD01 /* GameUI */ = {
 			isa = PBXGroup;
 			children = (
-				E745C70A25F416E10062577A /* Detail */,
-				E745C70925F416DB0062577A /* Home */,
+				E745C73A25F4269E0062577A /* Common */,
+				E745C73925F4267F0062577A /* Root */,
 				AD14B75B247EEF5B0033DD01 /* Info.plist */,
 				AD14B74D247EEF580033DD01 /* AppDelegate.swift */,
-				AD14B751247EEF580033DD01 /* ContentView.swift */,
-				E745C69325F2C34E0062577A /* Host.swift */,
 				AD14B74F247EEF580033DD01 /* SceneDelegate.swift */,
 				AD14B753247EEF5B0033DD01 /* Assets.xcassets */,
+				E745C70A25F416E10062577A /* Detail */,
+				E745C70925F416DB0062577A /* Home */,
 				AD14B758247EEF5B0033DD01 /* LaunchScreen.storyboard */,
 				AD14B755247EEF5B0033DD01 /* Preview Content */,
-				E745C72625F418850062577A /* Colors.swift */,
-				E745C72B25F419A40062577A /* Player.swift */,
 			);
 			path = GameUI;
 			sourceTree = "<group>";
@@ -158,6 +156,7 @@
 		E745C70925F416DB0062577A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E745C72B25F419A40062577A /* Player.swift */,
 				E745C68E25F2C31E0062577A /* Home.swift */,
 				E745C6A025F2C37B0062577A /* Card.swift */,
 				E745C70B25F416F10062577A /* HomeViewModel.swift */,
@@ -171,6 +170,23 @@
 				E745C71E25F4174E0062577A /* Detail.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		E745C73925F4267F0062577A /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				AD14B751247EEF580033DD01 /* ContentView.swift */,
+				E745C69325F2C34E0062577A /* Host.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		E745C73A25F4269E0062577A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E745C72625F418850062577A /* Colors.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,7 +505,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Kavsoft.GameUI;
+				PRODUCT_BUNDLE_IDENTIFIER = example.GameUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -509,7 +525,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Kavsoft.GameUI;
+				PRODUCT_BUNDLE_IDENTIFIER = example.GameUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -529,7 +545,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Kavsoft.GameUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = example.GameUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -550,7 +566,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Kavsoft.GameUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = example.GameUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -569,7 +585,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Kavsoft.GameUIUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = example.GameUIUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -588,7 +604,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Kavsoft.GameUIUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = example.GameUIUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
